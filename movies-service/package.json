@@ -1,0 +1,45 @@
+{
+  "name": "cinema-microservice-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-ts-anaet": "0.0.4",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@src": "dist",
+    "@config": "dist/config"
+  },
+  "author": "Anaet Hossain Rezve",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "microservice"
+  ]
+}
