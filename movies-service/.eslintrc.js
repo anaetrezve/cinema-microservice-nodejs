@@ -5,7 +5,14 @@ module.exports = {
     tsconfigRootDir: "./"
   },
   rules: {
-    "import/no-unresolved": "error"
+    "import/no-unresolved": "error",
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      {
+        "ignoreSiblings": true,
+        "argsIgnorePattern": "req|res|next|^err"
+      }
+    ],
   },
   plugins: ["import"],
   settings: {

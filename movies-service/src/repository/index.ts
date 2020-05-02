@@ -1,5 +1,5 @@
 class Repository {
-  public db: any;
+  private db: any;
   public collection: any;
 
   constructor(database: any) {
